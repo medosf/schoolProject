@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-
 const path = require('path');
-
+const { readAllItems } = require('./db/cosmos');
 
 const corsOptions = {
     origin: ['http://localhost:5173'],
@@ -14,12 +13,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(cors(corsOptions));
 
-app.get('/api', (req, res) => {
-    console.log('GET request received');
-    console.log('req headers>>>>', req.headers);
-    console.log('req cookies>>>>', req.cookies);
-
-    res.send([1,2,3]);
+app.get('/api', async(req, res) => {
+   const response = await readAllItems();
+   console.log("res >>>>>", response);
+   res.json(response);
 });
 
 app.get('*', (req, res) => {
