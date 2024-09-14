@@ -28,7 +28,8 @@ jobs:
       # Copy React build folder to server folder
       - name: Copy React build to Express server
         run: |
-          cp -R client/build server/build
+          ls
+          cp -R client/dist server/build
 
       # Install backend dependencies
       - name: Install dependencies for Express backend
