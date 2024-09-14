@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Home from './components/home'
 
 function App() {
   const [data, setData] = useState([])
@@ -18,6 +19,7 @@ useEffect(() => {
   return (
     <>
       welcome
+      <Home />
     </>
   )
 }
