@@ -33,8 +33,6 @@ function App() {
               <Link to="/">Home</Link>
 
               <Link to="/about">About</Link>
-
-              <Link to="/sign-in">SignIn</Link>
             </div>
             <div className="nav-buttons">
               <NavButtons />
