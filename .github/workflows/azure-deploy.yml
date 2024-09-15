@@ -24,6 +24,10 @@ jobs:
           npm install
           npm run build
           cd ..
+        env:
+          VITE_GOOGLE_MAPS_API_KEY: ${{ env.VITE_GOOGLE_MAPS_API_KEY }}  # Access API key from GitHub Secrets
+  
+  
 
       # Copy React build folder to server folder
       - name: Copy React build to Express server
