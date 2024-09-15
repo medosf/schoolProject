@@ -5,7 +5,11 @@
 
 .navigation {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 2.5rem;
+}
+.nav-links {
+  display: flex;
   gap: 2rem;
-  
+  align-items: center;
 }
