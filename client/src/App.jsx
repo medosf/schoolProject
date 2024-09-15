@@ -4,7 +4,7 @@ import Home from "./components/home";
 import About from "./components/about";
 import SignIn from "./components/signin";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import "./app.css";
+import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
