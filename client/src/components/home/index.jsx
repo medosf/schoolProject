@@ -1,22 +1,11 @@
-import { useState, useEffect } from "react";
 import MapComponent from "./Map";
-const Home = () => {
-  // const [location, setLocation] = useState({
-  //     lat: 0,
-  //     lng: 0
-  // })
-  // useEffect(()=>{
-  //     navigator.geolocation.getCurrentPosition((position) => {setLocation({
-  //         lat: position.coords.latitude,
-  //         lng: position.coords.longitude
-  // })})
-  // console.log("location", location)
+import "./home.css";
 
-  // },[])
+const Home = () => {
   return (
     <div>
-      <p>Home</p>
-      {/* <MapComponent lat={location.lat} lng={location.lng}/> */}
+      <p className="home-placeholder">Home</p>
+      <MapComponent />
     </div>
   );
 };

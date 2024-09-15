@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 const NavButtons = () => {
-  const { user, login, logout, isAuthenticated } = useAuth();
+  const { user, logout, isAuthenticated } = useAuth();
   return (
     <div>
       {isAuthenticated ? (
@@ -9,7 +10,9 @@ const NavButtons = () => {
           <button onClick={logout}>Log Out</button>
         </div>
       ) : (
-        <button onClick={() => login("John")}>Log In</button>
+        <Link className="link-button" to="/sign-in">
+          Sign In
+        </Link>
       )}
     </div>
   );
