@@ -20,7 +20,8 @@ jobs:
       # Install dependencies and build React app
       - name: Build React app
         env:
-          VITE_GOOGLE_MAPS_API_KEY: ${{ env.VITE_GOOGLE_MAPS_API_KEY }}  # Access API key from GitHub Secrets
+          VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}  # Access API key from GitHub Secrets
+
 
         run: |
           cd client
