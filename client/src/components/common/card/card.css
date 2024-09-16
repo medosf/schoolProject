@@ -1,0 +1,15 @@
+.card-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem 0;
+  flex-grow: 1;
+  align-items: center;
+  gap: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
